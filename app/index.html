@@ -16,14 +16,11 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="../bower_components/modernizr/modernizr.js"></script>
+        
         <!-- endbuild -->
 
     </head>
     <body>
-       
-
-
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
@@ -34,51 +31,47 @@
                 <h3 class="text-muted">todolist</h3>
             </div>
 
-            <div class="jumbotron">
+        <div class="jumbotron">
             
-            <button class="btn" data-toggle="modal" data-target="#basicModal">Click dis Shit</button>
+            <button class="btn" data-toggle="modal" data-target="#basicModal">Click to Add New Task</button>
 
             <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                 <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <div class="modal-content">
+                        <form action="">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Get it  done with this app</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h3>Add your todo here</h3>
+                            
+                            <input type="text" class="listInput"/><br>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn">Save changes</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <h3>Modal Body</h3>
-                <form>
-                    <input type="text" class="listInput"/><br>
-
-                </form>
-                
-
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                <button type="button" class="btn">Save changes</button>
         </div>
+    <div class="taskList">
+
     </div>
-  </div>
+
+   <!--  <div class="sorting-buttons"> -->
+    <div class="clearing-button">
+      <button type="remove" class="btn">Clear List</button>
+      </div>
+    </div>
+  
 </div>
-
-    <footer>
-      <a class="clear">Clear completed</a>
-      <div class="count"><span class="countVal"></span> left</div>
-    </footer>
-  </div>
-</div>
-            </div>
-
-            
-
             <div class="footer">
-                <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+                <p><span class="glyphicon glyphicon-heart"></span> from THEKACKIEPROJECT</p>
             </div>
-
-        </div>
-
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
