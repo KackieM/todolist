@@ -1,28 +1,29 @@
-// $(document).ready(function() {
-// 	// $("http://tiy-fee-rest.herokuapp.com/collections/kat")
+var itemsLeft = function() {
+	var markup = "";
+	var i;
 
-// 	$("form").on("submit", function(event){
-// 		event.preventDefault();
-// 		var myNewTask = $(".listInput").val();
-// 		var taskArrayObj = {
-// 			todo: myNewTask
-// 		};
-		
-// 		taskArray.push(taskArrayObj);
+	for (i = 0; i < toDoArr.length; i++) {
+		markup += "Items Left" + "(" + toDoArr.length + ")";
+		return markup;	
+		};
 
-// 		$(".taskList").append("<li>" + myNewTask + "</li>");
-	
-// 	});
-	
-// });
-
+};
 
 $(document).ready(function() {
 	$("form").on("submit", function(event){
 		event.preventDefault();
 		var myNewTask = $(".listInput").val();
-		$(".taskList").append("<li>" + myNewTask + "</li>");
+		console.log ("you added a task");
+		toDoArr.push(myNewTask);
+
+		$(".taskList").append("<li><span class=\"glyphicon glyphicon-check\"></span> " + myNewTask + "</li>");
 	
 	});
+
+	$(".taskList").on("click", ".glyphicon-check", function(e) {
+		alert("hello Kat");
+	});
+
+
 	
 });

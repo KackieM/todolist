@@ -16,20 +16,19 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
         
-        <!-- endbuild -->
+
+        <script type="template/html" id="taskList">
+            <% _.each(toDoArr, function(element, index, list){ %>
+                <li data-index="<%=index%>"><span class="glyphicon glyphicon-ok"></span><%= element.title %></li>
+        <% }); %>
+            </script>
 
     </head>
     <body>
         <div class="container">
             <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">todolist</h3>
+                <h1 class="text-muted">Make a List and Check It Twice</h3>
             </div>
 
         <div class="jumbotron">
@@ -59,9 +58,9 @@
                 </div>
             </div>
         </div>
-    <div class="taskList">
+    <ul class="taskList">
 
-    </div>
+    </ul>
 
    <!--  <div class="sorting-buttons"> -->
     <div class="clearing-button">
@@ -70,6 +69,21 @@
     </div>
   
 </div>
+
+        <nav class="navbar navbar-default toDoBox-fixed-bottom" role="navigation">
+                    <ul>
+                        <p class="navbar-text pull-left">Items Left</p>
+                        <div class="toDoTabs">
+                            <ul>
+                                <li class="nowActive navbar-text">All</li>
+                                <li class="navbar-text">Active</li>
+                                <li class="navbar-text">Completed</li>
+                            </ul>
+                        </div>
+                        <button class="navbar-text pull-right"><span class="glyphicon glyphicon-remove"></span>Clear Completed</button>
+                    </ul>
+                   
+                </nav>
             <div class="footer">
                 <p><span class="glyphicon glyphicon-heart"></span> from THEKACKIEPROJECT</p>
             </div>
@@ -78,6 +92,7 @@
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/modernizr/modernizr.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -108,6 +123,8 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/data.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
