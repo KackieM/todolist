@@ -24,6 +24,10 @@ $(document).ready(function() {
 		alert("hello Kat");
 	});
 
+	$(".taskList").click (function() {
+		$("li").push(myNewTask);
+	});
+
 
 	
 });
