@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 
 	$(".taskList").click (function() {
-		$("li").push(myNewTask);
+		$("li").splice(myNewTask);
 	});
 
 

@@ -18,7 +18,7 @@ body {
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
+header,
 .marketing,
 .footer {
     padding-left: 15px;
@@ -26,15 +26,18 @@ body {
 }
 
 /* Custom page header */
-.header {
+header {
     border-bottom: 1px solid #e5e5e5;
 
     /* Make the masthead heading the same height as the navigation */
-    h3 {
+    h1 {
         margin-top: 0;
         margin-bottom: 0;
         line-height: 40px;
         padding-bottom: 19px;
+        font-style: oblique;
+        color: lavendar;
+        font-stretch: expanded;
     }
 }
 
